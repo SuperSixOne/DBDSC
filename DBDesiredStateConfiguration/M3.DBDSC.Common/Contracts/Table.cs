@@ -14,19 +14,18 @@ namespace M3.DBDSC.Common.Contracts
         public string Name { get; set; }
 
         [DataMember]
-        public Column[] Columns { get; set; }
+        public List<Column> Columns { get; set; } = new List<Column>();
 
         [DataMember]
-        public Key[] Keys { get; set; }
+        public List<Key> Keys { get; set; } = new List<Key>();
 
         [DataMember]
-        public Constraint[] Constraints { get; set; }
+        public List<Constraint> Constraints { get; set; } = new List<Constraint>();
+        [DataMember]
+        public List<Trigger> Triggers { get; set; } = new List<Trigger>();
 
         [DataMember]
-        public Trigger[] Triggers { get; set; }
-
-        [DataMember]
-        public Index[] Index { get; set; }
+        public List<Index> Index { get; set; } = new List<Index>();
     }
 
     #region Supporting Types
@@ -40,6 +39,9 @@ namespace M3.DBDSC.Common.Contracts
 
         [DataMember]
         public string Type { get; set; }
+
+        [DataMember]
+        public Boolean AllowNulls { get; set; }
     }
 
     [DataContract]

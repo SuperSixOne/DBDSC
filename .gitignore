@@ -4,3 +4,8 @@
 
 /.vs
 /DBDesiredStateConfiguration/.vs/DBDesiredStateConfiguration/v16
+/DBDesiredStateConfiguration/Debug
+/DBDesiredStateConfiguration/M3.DBDSC.Common/obj
+/DBDesiredStateConfiguration/M3.DBDSC.Common.Tests/obj
+/DBDesiredStateConfiguration/Tools/DBDSC.CLI/obj/Debug/netcoreapp3.0
+/DBDesiredStateConfiguration/Tools/DBDSC.CLI/obj

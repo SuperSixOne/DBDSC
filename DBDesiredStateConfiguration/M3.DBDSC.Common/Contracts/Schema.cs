@@ -6,7 +6,7 @@ using System.Text;
 namespace M3.DBDSC.Common.Contracts
 {
     [DataContract]
-    public class Type
+    public class Schema
     {
         public Guid SerializationId { get; set; }
 
@@ -14,12 +14,12 @@ namespace M3.DBDSC.Common.Contracts
         public string Name { get; set; }
 
         [DataMember]
-        public Type DataType { get; set; }
+        public string Owner { get; set; }
 
         [DataMember]
-        public int Precision { get; set; }
+        public List<Table> Tables { get; set; } = new List<Table>();
 
         [DataMember]
-        public Boolean AllowNulls { get; set; }
+        public List<View> Views { get; set; } = new List<View>();
     }
 }
